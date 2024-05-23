@@ -180,3 +180,27 @@ h3 {
 .navbar__button img {
   width: 20px;
 }
+
+@media screen and (min-width: 576px) {
+  :root {
+    --h1-font-size: 50px;
+    --h2-font-size: 42px;
+    --h3-font-size: 36px;
+  }
+  .container {
+    width: 550px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 88vw;
+  }
+}
+@media screen and (min-width: 992px) {
+  .navbar__button {
+    display: none;
+  }
+  .navbar__ul {
+    display: flex;
+  }
+}
