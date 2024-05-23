@@ -148,3 +148,35 @@ h3 {
   background-color: white;
   border: 1px solid var(--prim-pink);
 }
+
+/* || navbar styling */
+.header {
+  position: sticky;
+  top: 0;
+  padding: 1rem 0;
+  background-color: white;
+  box-shadow: 0 0 10px 5px var(--border-color);
+}
+.navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 150px;
+}
+.navbar__ul {
+  display: none;
+  flex-flow: row nowrap;
+  gap: 1.5rem;
+}
+.navbar__button {
+  display: block;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.navbar__button img {
+  width: 20px;
+}
