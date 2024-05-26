@@ -213,11 +213,37 @@ h3 {
   padding: 0.5rem 0;
 }
 
+.topics {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.topics .card {
+  width: 100%;
+  background-color: white;
+  padding: 2.5rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 25px var(--border-color);
+}
+.topics .card:hover {
+  box-shadow: 0 0 10px 10px var(--border-color);
+}
+.card__icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--prim-pink);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
 @media screen and (min-width: 576px) {
   :root {
     --h1-font-size: 50px;
     --h2-font-size: 42px;
-    --h3-font-size: 36px;
   }
   .container {
     width: 550px;
@@ -226,6 +252,9 @@ h3 {
 @media screen and (min-width: 768px) {
   .container {
     width: 88vw;
+  }
+  .topics .card {
+    width: 45%;
   }
 }
 @media screen and (min-width: 992px) {
@@ -249,5 +278,17 @@ h3 {
 @media screen and (min-width: 1200px) {
   .section--hero > div {
     width: 50%;
+  }
+  .topics {
+    flex-flow: row nowrap;
+    gap: 1.5%;
+  }
+  .topics .card {
+    width: 24%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .topics {
+    gap: 2rem;
   }
 }
