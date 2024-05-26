@@ -3,9 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- Custom JS -->
     <script src="./js/main.js" defer></script>
-    <link rel="shortcut icon" href="./images/icon.webp" type="image/x-icon" />
+
     <title>GoDocs</title>
   </head>
   <body>
@@ -54,12 +62,15 @@
             <a href="#" class="button button--primary capitalize">
               get started
             </a>
-            <input
-              type="search"
-              name="search"
-              id="search"
-              placeholder="Search"
-            />
+            <form class="search__form">
+              <input
+                type="search"
+                name="search"
+                id="search"
+                placeholder="Search"
+              />
+              <button class="search__button">Ctrl + K</button>
+            </form>
           </div>
         </div>
         <img src="./images/hero.webp" alt="hugo" class="section--hero__img" />

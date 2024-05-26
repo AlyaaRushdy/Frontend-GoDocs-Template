@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
 /* || VARIABLES */
 :root {
   --header-height: 75px;
@@ -153,6 +151,7 @@ h3 {
 .header {
   position: sticky;
   top: 0;
+  z-index: 999;
   padding: 1rem 0;
   background-color: white;
   box-shadow: 0 0 10px 5px var(--border-color);
@@ -201,8 +200,13 @@ h3 {
   justify-content: center;
   gap: 1.5rem;
 }
-.section--hero__search input[type="search"] {
+.search__form {
+  position: relative;
   width: clamp(280px, calc(100% - 200px), 400px);
+}
+.section--hero__search input[type="search"] {
+  width: 100%;
+  height: 100%;
   font-size: 1rem;
   border: 1px solid var(--border-color);
   border-radius: 0.4rem;
@@ -211,6 +215,19 @@ h3 {
   background-size: 16px;
   text-indent: 36px;
   padding: 0.5rem 0;
+}
+.search__button {
+  position: absolute;
+  top: 15%;
+  right: 10px;
+  height: 70%;
+  background-color: transparent;
+  font-size: 0.9rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.2rem;
+  padding: 0.25rem;
+  color: #999;
+  font-weight: 500;
 }
 
 .topics {
@@ -254,7 +271,7 @@ h3 {
     width: 88vw;
   }
   .topics .card {
-    width: 45%;
+    width: 48%;
   }
 }
 @media screen and (min-width: 992px) {
