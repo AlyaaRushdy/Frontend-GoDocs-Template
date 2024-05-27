@@ -181,17 +181,23 @@ h3 {
 }
 
 /* Hero Section */
-.section--hero > div {
+:is(.section--hero, .section--help) > div {
   text-align: center;
 }
-.section--hero {
+.section--hero,
+.section--help {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
 }
-.section--hero__img {
+.section--help {
+  width: 90%;
+  margin: 0 auto;
+}
+.section--hero__img,
+.section--help__img {
   display: none;
 }
 .section--hero__search {
@@ -294,11 +300,13 @@ h3 {
   .navbar__ul {
     display: flex;
   }
-  .section--hero > div {
+  :is(.section--hero, .section--help) > div {
     text-align: left;
     width: 66%;
   }
-  .section--hero__img {
+
+  .section--hero__img,
+  .section--help__img {
     display: block;
   }
   .section--hero__search {
