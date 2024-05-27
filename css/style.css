@@ -269,6 +269,41 @@ h3 {
   margin-top: 2rem;
 }
 
+/* Footer Section */
+.footer {
+  padding: 1.5rem 0;
+  margin-bottom: 1rem;
+}
+.mainFooter {
+  display: flex;
+  flex-flow: column;
+
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.socials-div,
+.footer__ul {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+}
+.socials-icon {
+  padding: 0.75rem;
+  background-color: var(--prim-pink);
+  border-radius: 0.5rem;
+}
+.socials-icon img {
+  width: 15px;
+  height: 15px;
+}
+.footer hr {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 2rem 0;
+  border: none;
+}
+
 @media screen and (min-width: 576px) {
   :root {
     --h1-font-size: 50px;
@@ -304,13 +339,16 @@ h3 {
     text-align: left;
     width: 66%;
   }
-
   .section--hero__img,
   .section--help__img {
     display: block;
   }
   .section--hero__search {
     justify-content: left;
+  }
+  .mainFooter {
+    flex-flow: row nowrap;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 1200px) {
