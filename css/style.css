@@ -230,22 +230,16 @@ h3 {
   font-weight: 500;
 }
 
-.topics {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-.topics .card {
+/* Topics and FAQ Sections */
+.card {
   width: 100%;
   background-color: white;
   padding: 2.5rem 1.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 0 25px var(--border-color);
+  break-inside: avoid-column;
 }
-.topics .card:hover {
+.card:hover {
   box-shadow: 0 0 10px 10px var(--border-color);
 }
 .card__icon {
@@ -255,6 +249,18 @@ h3 {
   padding: 0.75rem;
   border-radius: 0.5rem;
   margin-bottom: 0.75rem;
+}
+
+.topics {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.faq {
+  margin-top: 2rem;
 }
 
 @media screen and (min-width: 576px) {
@@ -272,6 +278,13 @@ h3 {
   }
   .topics .card {
     width: 48%;
+  }
+  .faq {
+    columns: 2;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 1rem; */
   }
 }
 @media screen and (min-width: 992px) {
