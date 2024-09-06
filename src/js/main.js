@@ -1,4 +1,4 @@
-const dir = "./images/icons/";
+const dir = "./src/images/icons/";
 const topics = document.getElementsByClassName("topics")[0];
 const faq = document.querySelector(".faq");
 const cardIcons = [
