@@ -35,6 +35,8 @@ const faqparagraphContent = [
   "  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto.",
   "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus link ut ab quibusdam. Magnam cumque numquam tempore reprehenderit illo, unde cum omnis vel sed temporibus, repudiandae impedit nam ad enim porro, qui labore fugiat quod suscipit fuga necessitatibus. Perferendis, ipsum?",
 ];
+const navMenu = document.getElementById("navMenu");
+const navButton = document.getElementsByClassName("navbar__button")[0];
 let allCards = "";
 
 for (let i = 0; i < topicsHeadingsContent.length; i++) {
@@ -63,3 +65,14 @@ for (let i = 0; i < faqHeadingContent.length; i++) {
   allCards += card.outerHTML;
 }
 faq.innerHTML = allCards;
+
+// menu toggler
+if (window.visualViewport.width <= 991) {
+  window.addEventListener("click", (event) => {
+    if (event.target === navButton || event.target === navButton.children[0]) {
+      navMenu.classList.toggle("verticle-menu");
+    } else if (navMenu.classList.contains("verticle-menu")) {
+      navMenu.classList.remove("verticle-menu");
+    }
+  });
+}

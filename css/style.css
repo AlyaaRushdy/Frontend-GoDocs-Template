@@ -180,6 +180,21 @@ h3 {
   width: 20px;
 }
 
+.verticle-menu {
+  width: 100vw;
+  background-color: white;
+  display: flex !important;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  position: absolute;
+  top: var(--header-height);
+  left: -12vw;
+  padding-left: 12vw;
+  padding-bottom: 1rem;
+}
+.verticle-menu a {
+  color: var(--text-grey);
+}
 /* Hero Section */
 :is(.section--hero, .section--help) > div {
   text-align: center;
